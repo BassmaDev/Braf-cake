@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Braf Cake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cakestyle3.css">
+    <script src="login.js"></script>
+</head>
+<body>
+      <!--Header section starts-->
+      <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+ <a href="#" class="logo"><img src="logo.png" width="50p">BrafCake.<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-heart"><span id ="favCount" class="fav-count">0</span></a>
+            <a href="#" class="fas fa-shopping-cart"><span id ="cartCont" class="cart-count">0</span></a>
+            <a href="#" class="fas fa-user" id="loginIcon"></a>
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    
+                          <h2>Login</h2>
+                          <form id="loginForm" method="POST" action="register_user.php">
+<div class="bt">
+    <label for="username">username:</label>
+    <input type="text " id="username" name="username" required><br>
+   
+</div>
+<div class="bt">
+    <label >password:</label>
+    <input type="password " id="password" name="password" required><br>
+</div>
+<button type="submit">submit</button>
+
+                          </form>
+                </div>
+            </div>
+            <script src="login.js"></script>
+           
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </div>
+    </header>
+     <!--Header section ends-->
+      <!--Home section starts-->
+      <section class="home" id="home">
+        <div class="content">
+            <h3>Delicious Cake</h3>
+            <span>Taste the joy in every bite!</span>
+            <p>Welcome to braf cake when you have our favorite shop for cakes and sweets....</p>
+            <a href="#products" class="btn"> Order Now</a>
+        </div>
+     </section>
+
+
+    <!--Home section ends-->
+    <!--About section starts-->
+<section class="about" id="about">
+    <h1 class="heading"><span>about</span> us</h1>
+    <div class="row">
+        <div class="video-container">
+            <video src="lv_0_٢٠٢٤٠٥٠٧٢٠٢٩٤٢.mp4 " loop autoplay muted></video>
+            <h3>best cake for you</h3>
+        </div>
+        <div class="content">
+            <h3>why choose us?</h3>
+            <p>Welcome to braf cake, where we blend creativity and quality to deliver an exceptional experience to our customers. </p>
+            <p> We are not just a company; we consider ourselves partners in your success, turning ideas into reality.</p>
+            <a href="about.html" class="btn">Learn More</a>
+
+        </div>
+    </div>
+</section>
+
+  <!--About section ends-->
+
+<!--icons section starts-->
+
+<section class="icons_container">
+    <div class="icons">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="info">
+            <h3>Free delivery</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-gift"></i>
+        <div class="info">
+            <h3>offer & gits</h3>
+            <span>on all orders</span>
+        </div>
+    </div>
+ 
+    <div class="icons">
+       <i class="fa-solid fa-money-check-dollar" ></i>
+        <div class="info">
+            <h3>secure paymens</h3>
+            <span>protected by paypal</span>
+        </div>
+    </div>
+</section>
+
+<!--icons section ends-->
+
+<!--Products section stars-->
+
+<section class="products" id="products">
+    <h1 class="heading">latest <span>products</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <script>
+                var cartItems =[];
+                function addToCart(itemName){
+                   cartItems.push(itemName);
+                   updateCartcoubt();
+                    }
+                    function updateCartcoubt(){
+                        document.getElementById('cartCont').innerText=cartItems.length;
+                    }
+            </script>
+             
+
+               
+               <script>
+                var favtItems =[];
+                function addToF(itemName){
+                    favtItems.push(itemName);
+                    updateFavCont();
+                    }
+                    
+                    function updateFavCont(){
+                        document.getElementById('favCount').innerText=favtItems.length;
+                    }
+                </script>
+            <div class="image">
+                <img src="cake1.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart"  onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"  onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+      
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chocklate Cake</h3>
+                <div class="price">$17.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="cake2.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn" onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chocklate Cake</h3>
+                <div class="price">$13.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+           
+            <div class="image">
+                <img src="cake3.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn" onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Chocklate Cake</h3>
+                <div class="price">$14.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+            
+            <div class="image">
+                <img src="cake4.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Birthday Cake</h3>
+                <div class="price">$12.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+           
+            <div class="image">
+                <img src="cake5.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn" onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Flower Cake</h3>
+                <div class="price">$14.99 </div>
+            </div>
+        </div>
+        <div class="box">
+           
+            <div class="image">
+                <img src="cake6.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cake Designe</h3>
+                <div class="price">$15.99 </div>
+            </div>
+        </div>
+        <div class="box">
+           
+            <div class="image">
+                <img src="cake7.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cake Designe</h3>
+                <div class="price">$15.99 </div>
+            </div>
+        </div>
+      
+
+       
+        <div class="box">
+          
+            <div class="image">
+                <img src="cake8.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Fruit Cake</h3>
+                <div class="price">$17.99 </div>
+            </div>
+        </div>
+
+        <div class="box">
+           
+            <div class="image">
+                <img src="cake9.jpg" alt="">
+                <div class="icons">
+                    <a href="#products" class="fas fa-heart" onclick="addToF('Chocklate Cake')"></a>
+                    <a href="#products" class="cart-btn"onclick="addToCart('Chocklate Cake')">add to cart</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Cab Cake</h3>
+                <div class="price">$11.99 </div>
+            </div>
+        </div>
+
+       
+       
+<br>
+        <a href="products.html" class="btn">See mor</a>
+    </div>
+</section>
+<!--Products section ends-->
+
+
+<!--review section starts-->
+<section class="review" id="review">
+    <h1 class="heading">customer's <span>review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I would like to express my deep appreciation for your wonderful products. Your delicious cakes add a touch of joy and celebration to our time at work. Thank you for your efforts and creativity in creating products that make our day happier and more connected.</p>
+            <div class="user">
+                <img src="pic1.jpg" alt="">
+                <div class="user-info">
+                    <h3>charles Deco</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>I just wanted to take a moment to express my gratitude for the amazing cakes you provide. They not only satisfy our taste buds but also bring smiles to our faces during long work hours. Your dedication to quality and flavor is truly commendable, and it's a pleasure to enjoy such delightful treats. Thank you for adding sweetness to our workdays!</p>
+            <div class="user">
+                <img src="pic2.webp" alt="">
+                <div class="user-info">
+                    <h3> noua michel</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>Your cakes are not just desserts; they are moments of delight and indulgence in our busy work lives. Thank you for consistently delivering such delectable creations that never fail to lift our spirits. Your commitment to excellence shines through in every bite, and we're grateful for the joy you bring to our workplace.</p>
+            <div class="user">
+                <img src="pic1.jpg" alt="">
+                <div class="user-info">
+                    <h3>Abdullahi Ali</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        
+    </div>
+</section>
+
+<!--review section ends-->
+
+
+<!--contact section starts-->
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us</h1>
+    <div class="row">
+        <form action="">
+            <input type="text" placeholder="name" class="card">
+            <input type="email" placeholder="email" class="card">
+            
+            <textarea name="" class="card" placeholder="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn">
+          </form>
+        <div class="image">
+            <img src="contact.jpg">
+        </div>
+    </div>
+</section>
+<!--contact section ends-->
+
+<!--footer section starts-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#products">products</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>Extra links</h3>
+            <a href="#">my account</a>
+            <a href="#">my order</a>
+            <a href="#">my favorites</a>
+        </div>
+        <div class="box">
+            <h3>Locations</h3>
+            <a href="#">Algeria</a>
+            <a href="#">Skikda</a>
+            <a href="#">France</a>
+            <a href="#">Constantine</a>
+            <a href="#">Oran</a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">+123-456-7890</a>
+            <a href="#">brafcake@gmail.com</a>
+            <a href="#">Algeria,Skikda- 500203</a>
+          <img src="payment_img.jpg" alt="" width="85%">
+       
+        </div>
+    </div>
+    <div class="credit">
+        &copy; Created by <span> Bouhadea Bassma[.Coding]</span> All Right Reserved.
+    </div>
+</section>
+
+<!--footer section ends-->
+
+
+
+
+
+</body>
+</html>
